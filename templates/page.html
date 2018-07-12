@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block t1 %}
+
+<div>{{ name }}</div>
+<div>{{ 1 | add(2) }}</div>
+{% include 'menu.html' %}
+
+<div>
+	{% for k, v in d.items() %}
+	<div>{{ v }}</div>
+	{% endfor %}
+</div>
+
+{% endblock %}
