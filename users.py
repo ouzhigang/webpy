@@ -57,3 +57,15 @@ class Sess(HttpBase):
 		
 		web.header('content-type', 'text/json')
 		return json.dumps(main_module.session.user)
+
+class Upload(HttpBase):
+	def GET(self):
+		return render.upload()
+	
+	def POST(self):
+		a = web.input(file1 = {})
+		
+		web.debug(a.file1.filename) # 这里是文件名
+		web.debug(a.file1.value) # 这里是文件内容
+		
+		return "upload success"

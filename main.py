@@ -9,6 +9,8 @@ urls = (
 	'/page', 'users.Page',	
 	'/sess', 'users.Sess',
 	'^/gotoindex$', 'redirect /page',
+	'/upload', 'users.Upload',
+	'/do_upload', 'users.Upload',
 	'/', 'users.Index'
 )
 
